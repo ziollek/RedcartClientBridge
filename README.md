@@ -27,3 +27,11 @@ Add following repositories to your composer.json:
                 "url": "https://github.com/ziollek/RedcartClientBridge.git"
             }
         ]
+
+
+Add your api key to app/config/parameters.yml as below:
+
+        redcart_api_key: your_api_key
+
+Enjoy!
+        
