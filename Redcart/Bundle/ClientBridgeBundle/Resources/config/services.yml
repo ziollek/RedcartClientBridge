@@ -3,7 +3,7 @@ parameters:
 services:
     redcart_client_bridge.http_client:
         class: Guzzle\Http\Client
-        arguments: ["@=container.hasParameter('redcart_endpoint') ? parameter('redcart_endpoint') : 'redcart_endpoint'"]
+        arguments: ["@=container.hasParameter('redcart_endpoint') ? parameter('redcart_endpoint') : 'https://api2.redcart.pl'"]
 
     redcart_client_bridge.client:
         class: RedcartClient\Api\Client
