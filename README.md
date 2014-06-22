@@ -33,5 +33,13 @@ Add your api key to app/config/parameters.yml as below:
 
         redcart_api_key: your_api_key
 
+Register bundle in app/Kernel.php ($bundles array)
+
+        public function registerBundles()
+        {
+            $bundles = array(
+                ....
+                new \Redcart\Bundle\ClientBridgeBundle\RedcartClientBridgeBundle(),
+            );
+
 Enjoy!
-        
