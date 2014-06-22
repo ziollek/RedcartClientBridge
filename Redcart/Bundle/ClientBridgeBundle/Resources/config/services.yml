@@ -3,11 +3,11 @@ parameters:
 services:
     redcart_client_bridge.http_client:
         class: Guzzle\Http\Client
-        arguments: ["@=container.hasParameter('redcart_endpoint') ? parameter('redcart_endpoint') : 'https://api2.redcart.pl'"]
+        arguments: ['https://api2.redcart.pl']
 
     redcart_client_bridge.client:
         class: RedcartClient\Api\Client
-        arguments: ["@=container.hasParameter('redcart_api_key') ? parameter('redcart_api_key') : ''"]
+        arguments: [%redcart_api_key%]
 
     redcart_client_bridge.raw_to_resource_mapper:
         class: RedcartClient\Mapper\RawToResourceMapper
