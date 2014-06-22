@@ -20,4 +20,4 @@ services:
 
     redcart_client.redcart:
         class: RedcartClient\Api\Redcart
-        arguments: [["@=service('redcart_client_bridge.module_locator').getAllSupportedModules()"]]
+        arguments: ["@=service('redcart_client_bridge.module_locator').getAllSupportedModules()"]
