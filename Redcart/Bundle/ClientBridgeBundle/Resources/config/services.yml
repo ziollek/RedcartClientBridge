@@ -7,7 +7,7 @@ services:
 
     redcart_client_bridge.client:
         class: RedcartClient\Api\Client
-        arguments: [%redcart_api_key%]
+        arguments: [@redcart_client_bridge.http_client, %redcart_api_key%]
 
     redcart_client_bridge.raw_to_resource_mapper:
         class: RedcartClient\Mapper\RawToResourceMapper
